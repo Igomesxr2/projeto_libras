@@ -22,6 +22,7 @@ else:
     last_capture_time = time.time()  # Marca o tempo da última captura
 
     while True:
+        
         ret, frame = cap.read()
         if ret:
             # Exibe o frame capturado em uma janela

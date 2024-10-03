@@ -14,6 +14,5 @@ def check_imshow():
     except Exception as e:
         print(f'WANING: Enviroment does not support cv2.imshow() or PIL Image.')
         return False
-    
 
 model.predict(source='0',show=True, conf=0.3)

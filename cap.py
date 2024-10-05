@@ -12,17 +12,16 @@ else:
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 640) 
 
-    # Cria a pasta images para armazenar os frames
-    folder = "images"
-    if not os.path.exists(folder):
-        os.makedirs(folder)
+    # Cria a pasta images com a hora de criação
+    folder_name = time.strftime("images_%Y%m%d_%H%M%S")
+    if not os.path.exists(folder_name):
+        os.makedirs(folder_name)
 
     # Intervalo em segundos
     interval = 1
     last_capture_time = time.time()  # Marca o tempo da última captura
 
     while True:
-        
         ret, frame = cap.read()
         if ret:
             # Exibe o frame capturado em uma janela
@@ -31,7 +30,7 @@ else:
             # Verifica se o intervalo de captura passou
             if time.time() - last_capture_time >= interval:
                 # Gera o nome do arquivo da imagem
-                filename = os.path.join(folder, f"{time.time()}.jpg")
+                filename = os.path.join(folder_name, f"{time.time()}.jpg")
                 # Salva a imagem
                 cv2.imwrite(filename, frame)
                 last_capture_time = time.time()  # Atualiza o tempo da última captura

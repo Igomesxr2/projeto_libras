@@ -3,12 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interface de Detecção</title>
+    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&display=swap" rel="stylesheet">
+    <title>Sinalize</title>
 </head>
 <body>
-    <h1>Bem-vindo à Interface de Detecção</h1>
-    <form action="/detectar" method="get">
-        <button type="submit">Iniciar Detecção</button>
-    </form>
+    <header><h1>SINALIZE</h1></header>
+    
+    <div class="container">
+        <div class="container-titles">
+            <h1>Bem-vindo ao</h1>
+            <h2>SINALIZE</h2>
+            <p>Tradução de Libras em Tempo Teal</p>
+        </div>
+
+        <div class="container-buttons">
+            <p>O que você deseja?</p>
+            <form action="/detectar" method="get">
+                <button type="submit" class="button-translation">INICIAR TRADUÇÃO</button>
+            </form>
+        </div>
+
+        <footer><p>©2024 Sinalize. Todos os direitos reservados.</p></footer>
+    </div>
+
+    <footer></footer>
 </body>
 </html>

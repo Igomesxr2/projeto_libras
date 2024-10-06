@@ -2,7 +2,7 @@ from ultralytics import YOLO
 from ultralytics.models.yolo.detect import DetectionPredictor
 import cv2
 import numpy as np
-model=YOLO("C:/Users/pires/Downloads/best.pt")
+model = YOLO("C:/Users/pires/OneDrive/Área de Trabalho/projeto_libras/best.pt")
 
 from flask import Flask, render_template
 app = Flask(__name__)

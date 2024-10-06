@@ -1,0 +1,11 @@
+//Crie o ambiente virtual antes de instalar as Bibliotecas
+python -m venv .venv
+
+//Ative o ambiente virtual
+.venv\Scripts\activate
+
+//Bibliotecas necessárias para executar o arquivp model_test
+pip install ultralytics opencv-python numpy Flask
+
+//Mude esse caminho para o caminho que a pasta projeto_libras esta no seu computador
+model = YOLO("C:/Users/pires/OneDrive/Área de Trabalho/projeto_libras/best.pt")

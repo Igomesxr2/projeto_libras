@@ -1,6 +1,18 @@
+@import url(https://db.onlinewebfonts.com/c/531c4d3e960fd6a98df8b2df40441b3c?family=Daytona+W04+Condensed+Bold);
+@font-face {
+    font-family: "Daytona W04 Condensed Bold";
+    src: url("https://db.onlinewebfonts.com/t/531c4d3e960fd6a98df8b2df40441b3c.eot");
+    src: url("https://db.onlinewebfonts.com/t/531c4d3e960fd6a98df8b2df40441b3c.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/531c4d3e960fd6a98df8b2df40441b3c.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/531c4d3e960fd6a98df8b2df40441b3c.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/531c4d3e960fd6a98df8b2df40441b3c.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/531c4d3e960fd6a98df8b2df40441b3c.svg#Daytona W04 Condensed Bold")format("svg");
+}
+
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -9,21 +21,50 @@ html, body {
 
 body {
     display: flex;
-    flex-direction: column; 
 }
 
-header{
+header {
     background-color: #003087;
-    height: 70px;
+    width: 200px; /* Largura da barra lateral */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    position: fixed; /* Fixa a barra lateral */
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
 }
 
-.container{
+.logo {
+    width: 100px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 20px; /* Adiciona um pequeno espaço abaixo da logo */
+}
+
+header h1 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    writing-mode: vertical-rl; /* Alinha o texto verticalmente */
+    transform: rotate(180deg); /* Inverte o texto para leitura vertical */
+    margin: 0;
+    font-size: 24px;
+}
+
+.h2{
+    font-family: "Daytona W04 Condensed Bold";
+}
+
+.container {
+    margin-left: 200px; /* Para deixar espaço para a barra lateral */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
-.container-titles{
+.container-titles {
     height: 50%;
     background-color: #ff4d7f;
     display: flex;
@@ -34,13 +75,13 @@ header{
     font-weight: bold;
 }
 
-.container-titles h2{
-        font-family: "Archivo Black", sans-serif;
-        font-weight: 400;
-        font-size: 40px;
+.container-titles h2 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
 }
 
-.container-buttons{
+.container-buttons {
     height: 50%;
     display: flex;
     flex-direction: column;
@@ -48,14 +89,14 @@ header{
     align-items: center;
 }
 
-.container-buttons p{
+.container-buttons p {
     margin-bottom: 50px;
     color: #003087;
     font-weight: bold;
     font-size: 20px;
 }
 
-form{
+form {
     margin-bottom: 50px;
 }
 
@@ -77,7 +118,11 @@ form{
     background-color: #ff1e60;
 }
 
-footer{
-    background-color: #003087;
+footer {
+    background-color: #ff4d7f;
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }

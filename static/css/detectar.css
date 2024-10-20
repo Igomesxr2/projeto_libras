@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    width: 100%;
+}
+
+.logo {
+    width: 100px; /* Ajuste a largura conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-bottom: 20px; /* Adiciona um pequeno espaço abaixo da logo */
+    border-radius: 100px; /* Faz a logo ficar circular */
+    margin-top: 15px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    text-align: center;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 5px;
+}
+
+#video {
+    width: 100%;
+    height: auto;
+    max-height: 550px; /* Limita a altura do vídeo */
+    display: none;
+}
+
+.loading {
+    font-size: 24px;
+    color: #0c398c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+footer {
+    background-color: #b30436;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+}

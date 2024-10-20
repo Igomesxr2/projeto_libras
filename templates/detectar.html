@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detecção de Libras</title>
+    <link rel="stylesheet" href="static/css/detectar.css">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='css/logo2.png') }}" alt="Logo Sinalize" class="logo">
+    </header>
+
+    <div class="container">
+        <div>
+            <div class="video-container">
+                <div class="loading" id="loading">Vídeo carregando...</div>
+                <img src="{{ url_for('video_feed') }}" alt="Video Stream" id="video" onload="document.getElementById('loading').style.display='none'; this.style.display='block';">
+            </div>
+            <div id="palavras-detectadas" class="palavras"></div>
+        </div>
+    </div>
+
+    <footer><p>©2024 Sinalize. Todos os direitos reservados.</p></footer>
+
+    <script>
+        const video = document.getElementById('video');
+        video.onload = function() {
+            document.getElementById('loading').style.display = 'none';
+            video.style.display = 'block';
+        };
+
+        // Função para atualizar as palavras detectadas
+        function atualizarPalavras() {
+            fetch('/palavras')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('palavras-detectadas').innerText = data.join(', ');
+                })
+                .catch(error => console.error('Erro ao buscar palavras:', error));
+        }
+
+        // Atualizar as palavras a cada 1 segundo
+        setInterval(atualizarPalavras, 1000);
+    </script>
+</body>
+</html>

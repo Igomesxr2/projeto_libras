@@ -24,7 +24,7 @@ body {
 }
 
 header {
-    background-color: #003087;
+    background-color: #07255d;
     width: 200px; /* Largura da barra lateral */
     height: 100vh; /* Ocupa toda a altura da tela */
     position: fixed; /* Fixa a barra lateral */
@@ -36,13 +36,17 @@ header {
     flex-direction: column;
     text-align: center;
     padding: 20px;
+    box-shadow: 15px 10px 15px rgba(0, 0, 0, 0.3); 
 }
 
 .logo {
-    width: 100px; /* Ajuste a largura conforme necessário */
+    width: 150px; /* Ajuste a largura conforme necessário */
     height: auto; /* Mantém a proporção da imagem */
     margin-bottom: 20px; /* Adiciona um pequeno espaço abaixo da logo */
+    border-radius: 100px; /* Faz a logo ficar circular */
+    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.3);
 }
+
 
 header h1 {
     color: white;
@@ -66,7 +70,7 @@ header h1 {
 
 .container-titles {
     height: 50%;
-    background-color: #ff4d7f;
+    background-color: #b30436;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,6 +83,7 @@ header h1 {
     font-family: "Archivo Black", sans-serif;
     font-weight: 400;
     font-size: 40px;
+    color: #deca34;
 }
 
 .container-buttons {
@@ -91,7 +96,7 @@ header h1 {
 
 .container-buttons p {
     margin-bottom: 50px;
-    color: #003087;
+    color: #0c398c;
     font-weight: bold;
     font-size: 20px;
 }
@@ -101,7 +106,7 @@ form {
 }
 
 .button-translation {
-    background-color: #ff4d80;
+    background-color: #b30436;
     color: #ffffff;
     font-weight: bold;
     width: 200px;
@@ -115,14 +120,14 @@ form {
 }
 
 .button-translation:hover {
-    background-color: #ff1e60;
+    background-color: #e22b62;
 }
 
 footer {
-    background-color: #ff4d7f;
+    background-color: #b30436;
     height: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
     color: white;
 }

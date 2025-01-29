@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 webview.create_window('SINALIZE', app)
 
-model = YOLO("C:/Users/pires/Documentos/projeto_libras/best.pt")
+model = YOLO("C:/Users/Admin/Desktop/projeto_libras/best.pt")
 
 palavras = []
 ultima_palavra = ""

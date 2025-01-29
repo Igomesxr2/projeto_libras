@@ -17,16 +17,15 @@ header {
     align-items: center;
     background-color: #f0f0f0;
     width: 100%;
+    background-color: #b30436;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #deca34;
+    font-weight: bold;
+    padding: 20px;
 }
-
-.logo {
-    width: 100px; /* Ajuste a largura conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-bottom: 20px; /* Adiciona um pequeno espaço abaixo da logo */
-    border-radius: 100px; /* Faz a logo ficar circular */
-    margin-top: 15px;
-}
-
 .container{
     display: flex;
     justify-content: center;
